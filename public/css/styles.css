@@ -1,11 +1,44 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
 body {
-	font-family:'Helvetica Neue',Helvetica,Arial,san-serif;
-	font-weight:200;
-	margin:50px 0;
-	padding:0;-webkit-user-select:none;
-	-khtml-user-select:none;
-	-moz-user-select:none;
-	-o-user-select:none;user-select:none
+	font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background: #eeeeee;
+	color: #333333;
+	width: 520px;
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+}
+
+li, div {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+
+ul {
+	list-style-type: none;
+	margin: 10px;
+	vertical-align: middle;
+}
+
+li {
+	margin-left: -20px;
+	margin-bottom: 2px;
+	height: 60px;
+	float: left;
+	border-color:#cccccc;
+	border-bottom-style: solid;
+	border-right-style: solid;
+	border-width: 1px;
+}
+
+span {
+	vertical-align: center;
 }
 
 #outer {
@@ -16,63 +49,47 @@ body {
 .player {
 	padding:5px;
 	cursor: pointer;
+	vertical-align: middle;
 }
 
-.player .name {
+.player.selected {
+	background-color:#cccccc;
+	height: 50px;
+}
+
+.name {
 	display:inline-block;
 	width:240px;
 	font-size:1.75em;
 	margin-left: 10px;
 }
 
-.player .score {
+.score {
 	display:inline-block;
 	width:100px;
 	text-align:right;
 	font-size:2em;
 	font-weight:700;
 	color:#777;
-}
-
-div.selected {
-	background-color:#cccccc;
-}
-
-ul {
-	list-style-type: none;
-	margin: 10px;
-}
-
-li {
-	height: 60px;
-	float: left;
-}
-
-.player.selected .score {
-	color:#000;
-	height: 50px;
+	vertical-align: middle;
 }
 
 .inc, .dec {
-	/*position: absolute;*/
-	/*right: 5px;*/
-	/*top: 20px;*/
-	/*display: none;*/
+	color:#777;
+	margin-left: 5px;
+	border-style: solid;
+	font-size:2em;
+	font-weight:700;
 	cursor: pointer;
-	width: 20px;
-	height: 20px;
+	width: 80px;
+	height: 30px;
 	z-index: 9999 important!;
+	text-align: center;
 }
 
-.inc {
-	/*right: 20px;*/
-	/*margin-left: 20px;*/
-	background:url("/images/plus.png");
-}
-
-.dec {
-	/*margin-left: 10px;*/
-	background:url("/images/minus.png");
+.inc:hover, .dec:hover {
+	vertical-align: top;
+	color:black;
 }
 
 img.photo {
@@ -91,20 +108,45 @@ div.photo {
 	float: left;
 }
 
+header {
+	/*margin: 0 -20px -20px 0px;*/
+	overflow: hidden;
+	text-align: center;
+	border-bottom: 1px solid #ededed;
+	padding: 0 20px;
+	line-height: 40px;
+}
+
+footer {
+	padding: 20px 15px 20px 20px;
+	overflow: hidden;
+}
+
+footer div {
+	float: right;
+}
+
+footer img {
+	border:0px;
+	border-style: none;
+	border-color: transparent;
+	width: 60px;
+}
+
 #main {
 	/*border-style:dashed;*/
+	background: #ffffff;
 	border-color:#ccc;
 	border-width:4px;
 	margin:50px 10px;
-	width: 480px;
-	padding: 20px;
+	width: 460px;
+	padding: 10px;
 	position: fixed;
 	top: 10px;
 	left: 50%;
 	margin-left: -300px;
 	box-shadow: 10px 10px 5px #888888;
 }
-
 
 #board {
 	overflow: scroll;
@@ -118,6 +160,4 @@ div.photo {
 	display: block;
 }
 
-span {
-	vertical-align: center;
-}
+.clear {clear: both;}

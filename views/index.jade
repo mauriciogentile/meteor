@@ -1,5 +1,4 @@
 extends layout
-
 block content
 	script(type="text/template", id="item-template")
 		|<div class="player <%= selected ? 'selected' : '' %>">
@@ -10,10 +9,15 @@ block content
 	script(type="text/template", id="footer-template")
 		|<div id="selectedPlayer" class="name"><%- playerName %></div>
 
-	div(id="main")
+	div(id="main",class="shadow")
+		header
+			h1 Leaderboard
 		section(id="board)
 			ul(id="leaderboard", class="leaderboard")
+			div(class='clear')
 		footer(id="actions")
 			div
-				img(class="inc")
-				img(class="dec")
+				div(class="inc") +5
+				div(class="dec") -5
+			div(class='clear')
+	div(class='clear')
