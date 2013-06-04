@@ -111,11 +111,9 @@ $(function() {
     },
     incScore: function() {
       this.model.updateScore(5);
-      //this.render();
     },
     decScore: function() {
       this.model.updateScore(-5);
-      //this.render();
     },
     render: function() {
       this.leaderboard.empty();
