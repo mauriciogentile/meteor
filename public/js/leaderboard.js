@@ -72,7 +72,7 @@ $(function() {
     },
     connectToServer: function () {
       var self = this;
-      this.io = io.connect('http://localhost:1234');
+      this.io = io.connect('/');
       this.io.on("new_score", function(data) {
           var players = self.scoreBoard.where({playerId: data.playerId});
           if(players.length) {
